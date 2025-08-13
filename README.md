@@ -10,6 +10,28 @@
 
 It’s built to be safe, scriptable, and easy to understand — no 40-character `exiftool` incantations required.
 
+## Why `metaclean` ?
+
+I wanted to create a single, robust tool to process images before uploading them to my website. This script replaces a number of shell functions and tools that were fiddly and allowed edge cases to slip through. With metaclean you have a scriptable, flexible tool for all your image hygiene needs. 
+
+
+## QuickStart
+
+- Clone the tool
+- Create a venv or install Pillow directly
+- `chmod +x metaclean.py`
+
+Then you simply use:
+```bash
+# Scan for metadata
+metaclean --scan photo.jpg
+
+# Strip metadata (safe copy to ~/Pictures/cleaned/)
+metaclean --strip photo.jpg
+```
+
+
+
 ---
 
 ## ✨ Features
@@ -128,8 +150,15 @@ find ~/Photos -name '*.jpg' | metaclean --scan --positives | metaclean --strip -
 
 ## ⚖️ License
 
-MIT — because image hygiene should be free and easy.
+[MIT](LICENSE) — because image hygiene should be free and easy.
 
 ---
+
+## Conclusion
+
+PRs and issues welcome or Email me: [feedback@adminjitsu.com](mailto:feedback@adminjitsu.com)
+
+For more, check out my post on Adminjitsu.com [metaclean](https://adminjitsu.com/posts/metaclean/)
+
 
 > *“Just because you don’t see metadata doesn’t mean it’s not there.”*
