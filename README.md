@@ -36,12 +36,12 @@ metaclean --strip photo.jpg
 
 ## ✨ Features
 
-- 🕵️ **Scan** JPG, PNG, WebP, TIFF for metadata (EXIF, GPS, copyright)
-- 🧹 **Strip** all metadata by default (EXIF is rebuilt clean)
-- 🏷 **Optional copyright tag** (`--copyright "© Your Name"`)
-- 🎛 **Granular control** — preserve `--keep-date` or `--keep-orientation` if you choose
-- 🔄 **Safe by default**: makes a `_clean` copy in `~/Pictures/cleaned/` unless you ask for `--inplace`
-- 📡 **Pipe-friendly**: plays well with `find`, `xargs`, `fd`, etc.
+- **Scan** JPG, PNG, WebP, TIFF for metadata (EXIF, GPS, copyright)
+- **Strip** all metadata by default (EXIF is rebuilt clean)
+- **Optional copyright tag** (`--copyright "© Your Name"`)
+- **Granular control** — preserve `--keep-date` or `--keep-orientation` if you choose
+- **Safe by default**: makes a `_clean` copy in `~/Pictures/cleaned/` unless you ask for `--inplace`
+- **Pipe-friendly**: plays well with `find`, `xargs`, `fd`, etc.
 
 ---
 
@@ -58,7 +58,7 @@ sudo mv metaclean.py /usr/local/bin/metaclean
 
 ## 🔧 Usage
 
-### 🕵️ **Scan for metadata**
+### **Scan for metadata**
 
 ```bash
 # Scan a single image
@@ -73,7 +73,7 @@ find ~/Pictures -name '*.jpg' | metaclean --scan
 
 ---
 
-### 🎯 **Only show images that HAVE metadata**
+### **Only show images that HAVE metadata**
 
 ```bash
 # Only print “positive” files (quietly skips clean images)
@@ -88,7 +88,7 @@ metaclean --scan --positives ~/Pictures/*.jpg | metaclean --strip
 
 ---
 
-### 🧹 **Strip metadata**
+### **Strip metadata**
 
 ```bash
 # Default: creates clean copies in ~/Pictures/cleaned/
@@ -142,9 +142,9 @@ find ~/Photos -name '*.jpg' | metaclean --scan --positives | metaclean --strip -
 
 ## 🔮 Roadmap
 
-- 📝 `--report` CSV mode for “privacy inventory”
-- 🔍 Optional `--stego` invisible watermarking for ownership tracking
-- 🧩 Optional backend “modes” (`--use-exiftool`) for exotic file types
+-  `--report` CSV mode for “privacy inventory”
+-  Optional `--stego` invisible watermarking for ownership tracking
+-  Optional backend “modes” (`--use-exiftool`) for exotic file types
 
 ---
 
